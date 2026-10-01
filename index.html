@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vicente Ruiz · Ingeniería de Software</title>
+  <meta name="description" content="Portafolio de Tu Nombre, estudiante de Ingeniería Civil en Computación e Informática con enfoque en ingeniería de software.">
+  <meta name="theme-color" content="#050b1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23050b1f'/%3E%3Cpath d='M11 6h16l-6 20H5z' fill='%2353e3ff'/%3E%3Cpath d='M24 6h3l-6 20h-3z' fill='%23e3213f'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    // Las animaciones se activan solo si el sistema no pide reducir movimiento.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js');
+      // Si el JS no alcanza a cargar, no dejar la página tapada por la intro.
+      setTimeout(function () {
+        if (!window.__portfolioReady) document.documentElement.classList.remove('js');
+      }, 4000);
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#sobre-mi">Saltar al contenido</a>
+
+  <!-- Intro estilo Persona 3: franjas diagonales que cruzan la pantalla al cargar -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro-cover"></div>
+    <div class="intro-stripe"></div>
+    <div class="intro-stripe"></div>
+    <div class="intro-stripe"></div>
+    <div class="intro-stripe"></div>
+  </div>
+
+  <header class="site-nav">
+    <nav class="nav-pill" aria-label="Principal">
+      <a class="nav-brand" href="#inicio">Dazztyn<span>/</span></a>
+      <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+      <a class="nav-link" href="#proyectos">Proyectos</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ PORTADA ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-lines"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-stripe"></div>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-id">
+          <p class="hero-label">// Portafolio</p>
+          <h1 class="hero-name">
+            <span class="name-line">Vicente</span>
+            <span class="name-line">Ruiz</span>
+          </h1>
+          <div class="hero-tag"><span>Ingeniería Civil en Computación e Informática</span></div>
+          <p class="hero-typed">
+            <span class="sr-only">Enfoque en ingeniería de software</span>
+            <span aria-hidden="true">&gt; <span class="typed-text" data-words="Ingeniería de Software|Desarrollo Web|Full Stack Development|">Ingeniería de Software</span><span class="typed-caret"></span></span>
+          </p>
+        </div>
+
+        <!-- Menú -->
+        <nav class="p3-menu" aria-label="Secciones">
+          <ul>
+            <li class="p3-row" style="--rot: -5deg; --shift: 0rem;"><a class="p3-item" href="#sobre-mi"><span>Sobre mí</span></a></li>
+            <li class="p3-row" style="--rot: 3deg; --shift: 2.5rem;"><a class="p3-item" href="#proyectos"><span>Proyectos</span></a></li>
+            <li class="p3-row" style="--rot: -2deg; --shift: 1rem;"><a class="p3-item" href="#contacto"><span>Contacto</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <a class="scroll-cue" href="#sobre-mi" aria-label="Bajar a Sobre mí">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="container">
+        <h2 class="section-title" id="sobre-mi-title">
+          <span class="section-num">01.</span><span class="section-text">Sobre mí</span><span class="wipe" aria-hidden="true"></span>
+        </h2>
+
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>Estudiante de <strong>Ingeniería Civil en Computación e Informática</strong> en la <span class="hl">Universidad Católica del Norte</span> sede Coquimbo, me especializo en diseñar sistemas escalables, automatizar procesos y solucionar problemas.</p>
+            <p>Me gusta participar en el desarrollo y gestión de proyectos, implementando tecnologías modernas, metodologías ágiles y trabajando en equipo. Actualmente estoy profundizando en <span class="hl">Cloud Computing</span> y <span class="hl">DevOps</span>.</p>
+            <p>Poseo experiencia en el desarrollo de <span class="hl">Backend, Frontend, diseño de Bases de Datos, Desarrollo Web, Despliegue de Proyectos y Aplicaciones Móviles.</span></p>
+            <p>Fuera de los estudios y el trabajo, disfruto de escuchar música, jugar videojuegos, ver películas, series y anime.</p>
+          </div>
+
+          <aside class="about-card" data-reveal>
+            <dl>
+              <div><dt>Educación</dt><dd>4° año académico (8vo semestre)</dd></div>
+              <div><dt>Idiomas</dt><dd>Español (nativo), Inglés (intermedio-alto)</dd></div>
+              <div><dt>Ubicación</dt><dd>Coquimbo, Chile</dd></div>
+              <div><dt>Aprendiendo</dt><dd>Azure, Kubernetes, Next.js, FastAPI, Cisco Packet Tracer</dd></div>
+              <div><dt>Estado</dt><dd><span class="status-dot" aria-hidden="true"></span>Buscando práctica profesional</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="skills">
+          <div class="skill-group" data-reveal>
+            <h3>Lenguajes</h3>
+            <ul class="chips"><li>TypeScript</li><li>Python</li><li>JavaScript</li><li>Java</li><li>C++</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Frameworks</h3>
+            <ul class="chips"><li>NestJS</li><li>React</li><li>React Native (Expo Go)</li><li>FastAPI</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Bases de Datos</h3>
+            <ul class="chips"><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>Supabase</li></ul>
+          </div>
+          <div class="skill-group" data-reveal>
+            <h3>Herramientas y Despliegue</h3>
+            <ul class="chips"><li>Git</li><li>Github</li><li>Docker</li><li>Jira</li><li>Railway</li><li>Render</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <h2 class="section-title" id="proyectos-title">
+          <span class="section-num">02.</span><span class="section-text">Proyectos</span><span class="wipe" aria-hidden="true"></span>
+        </h2>
+
+        <div class="projects-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-top">
+              <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              <div class="project-links">
+                <a href="https://github.com/dazztyn/Datademy" target="_blank" rel="noopener noreferrer" aria-label="Repositorio de Sistema de Inventario en GitHub">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Datademy</h3>
+            <p class="project-desc">Generador de informes a partir de extracción de datos de Google Forms mediante sistema de plantillas.</p>
+            <ul class="tags"><li>NestJS</li><li>React + Vite</li><li>React Native</li><li>MongoDB</li><li>Redis</li><li>Google Workspace APIs/li></ul>
+          </article>
+
+        </div>
+
+        <div class="projects-more" data-reveal>
+          <a class="p3-btn" href="https://github.com/dazztyn" target="_blank" rel="noopener noreferrer"><span>Ver más en GitHub</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section section-contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 class="section-title" id="contacto-title">
+          <span class="section-num">03.</span><span class="section-text">Contacto</span><span class="wipe" aria-hidden="true"></span>
+        </h2>
+        <p class="contact-lead" data-reveal>¿Tienes una idea, un proyecto o simplemente quieres conversar? Escríbeme o encuéntrame en mis perfiles.</p>
+        <div class="contact-actions" data-reveal>
+          <a class="p3-btn p3-btn--primary" href="https://www.linkedin.com/in/vicente-ruiz-escobar/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="p3-btn" href="https://github.com/dazztyn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a class="p3-btn" href="mailto:vicenteruize25@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span>Correo</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p> Dazztyn · <span id="year">2026</span></p>
+  </footer>
+</body>
+</html>
