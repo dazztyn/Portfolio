@@ -679,6 +679,13 @@ svg {
   font-weight: 700;
   color: var(--white);
 }
+.project-role {
+  margin: -0.3rem 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
 .project-desc {
   flex: 1;
   margin: 0 0 1.25rem;
