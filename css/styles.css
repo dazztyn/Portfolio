@@ -455,6 +455,12 @@ svg {
   position: relative;
   padding: clamp(80px, 12vw, 140px) 0;
 }
+/* Gradiente leve en Sobre mí y Proyectos. Empieza y termina en --bg
+   para que no se note el corte entre secciones. */
+#sobre-mi,
+#proyectos {
+  background: linear-gradient(180deg, var(--bg) 0%, #071640 50%, var(--bg) 100%);
+}
 .container {
   width: 100%;
   max-width: var(--maxw);
