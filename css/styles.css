@@ -501,6 +501,82 @@ svg {
   pointer-events: none;
 }
 
+/* Panel blanco lateral (estilo menú de pausa P3).
+   Ocupa solo el margen lateral, así que aparece en pantallas anchas
+   donde no tapa el contenido. Variantes: --left y --right. */
+.side-panel {
+  display: none;
+}
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 1280px) {
+  .side-panel {
+    --side-w: calc((100vw - var(--maxw)) / 2 + 24px);
+    --slant: 90px;
+    --edge: 10px; /* grosor del filo cian en la diagonal */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    gap: 0.04em;
+    width: var(--side-w);
+    overflow: hidden;
+    background: var(--cyan); /* queda visible como filo en el borde diagonal */
+    font-size: calc(var(--side-w) * 0.4);
+  }
+  /* Fondo blanco, un poco más angosto para dejar el filo cian */
+  .side-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+  }
+
+  /* Izquierda: diagonal a la derecha, texto abajo leyéndose hacia arriba */
+  .side-panel--left {
+    left: 0;
+    align-items: flex-end;
+    padding: 0 0 40px 14px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%);
+  }
+  .side-panel--left::before {
+    clip-path: polygon(0 0, calc(100% - var(--edge)) 0, calc(100% - var(--slant) - var(--edge)) 100%, 0 100%);
+  }
+  .side-panel--left .side-text {
+    transform: rotate(180deg);
+  }
+
+  /* Derecha: espejo del izquierdo, texto arriba leyéndose hacia abajo */
+  .side-panel--right {
+    right: 0;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 40px 14px 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, var(--slant) 100%);
+  }
+  .side-panel--right::before {
+    clip-path: polygon(var(--edge) 0, 100% 0, 100% 100%, calc(var(--slant) + var(--edge)) 100%);
+  }
+
+  .side-text {
+    position: relative;
+    writing-mode: vertical-rl;
+    font-family: var(--font-display);
+    line-height: 0.82;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--bg);
+  }
+  /* Texto secundario: solo el contorno de las letras */
+  .side-text--ghost {
+    color: transparent;
+    -webkit-text-stroke: 2px #a9b5cc;
+  }
+}
+
 /* Sobre mí */
 .about-grid {
   display: grid;

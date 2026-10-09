@@ -143,8 +143,13 @@
   function setupReveals() {
     const items = gsap.utils.toArray('[data-reveal]');
     const titles = gsap.utils.toArray('.section-title');
+    const panels = gsap.utils.toArray('.side-panel');
 
     gsap.set(items, { autoAlpha: 0, y: 32 });
+    // Cada panel parte fuera de pantalla, hacia su propio lado.
+    panels.forEach((p) => {
+      gsap.set(p, { xPercent: p.classList.contains('side-panel--right') ? 100 : -100 });
+    });
     titles.forEach((t) => {
       gsap.set(t.querySelectorAll('.section-num, .section-text'), { autoAlpha: 0 });
       gsap.set(t.querySelector('.wipe'), { scaleX: 0, transformOrigin: 'left center' });
@@ -158,7 +163,11 @@
         if (!entry.isIntersecting && !alreadyPassed) return;
         io.unobserve(entry.target);
         if (entry.target.matches('.section-title')) revealTitle(entry.target);
-        else batch.push(entry.target);
+        else if (entry.target.matches('.section')) {
+          // El panel parte fuera de pantalla, por eso se observa su sección.
+          const panel = entry.target.querySelector(':scope > .side-panel');
+          gsap.to(panel, { xPercent: 0, duration: 0.9, ease: 'expo.out' });
+        } else batch.push(entry.target);
       });
       if (batch.length) {
         gsap.to(batch, {
@@ -173,7 +182,7 @@
       }
     }, { rootMargin: '0px 0px -12% 0px' });
 
-    [...titles, ...items].forEach((el) => io.observe(el));
+    [...titles, ...panels.map((p) => p.parentElement), ...items].forEach((el) => io.observe(el));
   }
 
   function revealTitle(title) {
