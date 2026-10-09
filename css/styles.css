@@ -539,10 +539,10 @@ svg {
     left: 0;
     align-items: flex-end;
     padding: 0 0 40px 14px;
-    clip-path: polygon(0 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - var(--slant)) 0, 100% 100%, 0 100%);
   }
   .side-panel--left::before {
-    clip-path: polygon(0 0, calc(100% - var(--edge)) 0, calc(100% - var(--slant) - var(--edge)) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - var(--slant) - var(--edge)) 0, calc(100% - var(--edge)) 100%, 0 100%);
   }
   .side-panel--left .side-text {
     transform: rotate(180deg);
